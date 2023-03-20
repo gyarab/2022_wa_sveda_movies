@@ -1,0 +1,15 @@
+- model: auth.user
+  pk: 1
+  fields:
+    password: pbkdf2_sha256$390000$kaqmexeHC2DCew2VkqGT4u$BXLY3xZCapiXT9I4XXxkJQmIzVSqTsM4Bmvufk/vI84=
+    last_login: 2023-03-14 08:08:43.989080+00:00
+    is_superuser: true
+    username: jakub.sveda
+    first_name: ''
+    last_name: ''
+    email: jakub.sveda@icloud.com
+    is_staff: true
+    is_active: true
+    date_joined: 2023-03-14 08:07:19.946452+00:00
+    groups: []
+    user_permissions: []
