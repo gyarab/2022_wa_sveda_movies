@@ -2,7 +2,7 @@
 
 from django.shortcuts import render
 
-from .models import Movie
+from .models import Movie, Director
 
 
 def homepage(request):
@@ -14,6 +14,6 @@ def homepage(request):
 
 def directors(request):
     context = {
-        "directors": Movie.objects.all(),
+        "directors": Director.objects.all(),
     }
     return render(request, 'directors.html', context)

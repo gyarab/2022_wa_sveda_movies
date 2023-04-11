@@ -21,5 +21,5 @@ from films.views import directors
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', homepage, name='homepage'),
-    path('directors/', directors,name='directors'),
+    path('directors/', directors, name='directors'),
 ]
