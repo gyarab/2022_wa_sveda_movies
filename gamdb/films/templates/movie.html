@@ -11,11 +11,17 @@
      alt="Card image cap">
 <p>{{ movie.description|safe }}</p>
 
-<form action="" method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Odeslat"/>
-</form>
+<div class="mb-3 my-3">
+    <button class="btn btn-outline-secondary my-3" type="button" data-bs-toggle="collapse" data-bs-target="#rateForm"
+            aria-expanded="false" aria-controls="collapseExample">
+        Přidat hodnocení
+    </button>
+    <form action="" method="post" class="w-75 collapse" id="rateForm">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" class="form-control btn btn-primary" value="Odeslat"/>
+    </form>
+</div>
 
 {% for comment in comments %}
 <p>
