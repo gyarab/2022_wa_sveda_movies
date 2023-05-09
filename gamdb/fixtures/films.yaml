@@ -1,60 +1,108 @@
 - model: films.movie
   pk: 1
   fields:
-    name: Movie
-    year: 1999
-    description: foenworifgnreongore
+    name: Vykoupen� z v�znice Shawshank
+    year: 1994
+    description: 9,2 stars
+    director: null
+    genres: []
 - model: films.movie
   pk: 2
   fields:
-    name: Movie2
-    year: 1980
-    description: fmklewmlerknvlr
+    name: Kmotr
+    year: 1972
+    description: 9,2 stars
+    director: null
+    genres: []
 - model: films.movie
   pk: 3
   fields:
-    name: Movie3
-    year: 1989
-    description: krejngfkernjnrelkvkerlm
+    name: Temn� ryt��
+    year: 2008
+    description: 9 stars
+    director: null
+    genres: []
 - model: films.movie
   pk: 4
   fields:
-    name: film
-    year: 7899
-    description: ekjnbkejrnjvre<
+    name: Kmotr II
+    year: 1974
+    description: 9 stars
+    director: null
+    genres: []
 - model: films.movie
   pk: 5
   fields:
-    name: ewjkbnfijewnkj<
-    year: 78987
-    description: vknjbefjvnejk rvkn rk
+    name: Dvan�ct rozhn�van�ch mu��
+    year: 1957
+    description: 9 stars
+    director: null
+    genres: []
 - model: films.movie
   pk: 6
   fields:
-    name: jenvejrnvjker
-    year: 789
-    description: ewkjnfewrfjkrenkjn
+    name: Schindler�v seznam
+    year: 1993
+    description: 8,9 stars
+    director: null
+    genres: []
 - model: films.movie
   pk: 7
   fields:
-    name: ebfijenrkfnker
-    year: 6789
-    description: lkfnerjfnrl
+    name: 'P�n prsten�: N�vrat kr�le'
+    year: 2003
+    description: 8,9 stars a je to zlobiv� af
+    director: null
+    genres: []
 - model: films.movie
   pk: 8
   fields:
-    name: ewnkfnuerwnoivkejrnvjk
-    year: 5678
-    description: ewkjf jker vn jrevnmnmemn
+    name: 'Pulp Fiction: Historky z podsv�t�'
+    year: 1994
+    description: Miluju random filmy
+    director: null
+    genres: []
 - model: films.movie
   pk: 9
   fields:
-    name: ibfjkwen fjknkerj
-    year: 6789
-    description: ewkjfbnijewnrbfjk
+    name: 'P�n prsten�: Spole�enstvo prstenu'
+    year: 2001
+    description: Zlobiv� part 2
+    director: null
+    genres: []
 - model: films.movie
   pk: 10
   fields:
-    name: eiwbfbwenjkf
-    year: 5678
-    description: kjrnvjkwekvn
+    name: Hodn�, Zl� a O�kliv�
+    year: 1966
+    description: Idk cotoe
+    director: null
+    genres: []
+- model: films.movie
+  pk: 11
+  fields:
+    name: Hv�zdn� v�lky
+    year: 1976
+    description: �torek praporek
+    director: null
+    genres: []
+- model: films.director
+  pk: 1
+  fields:
+    name: Steven Spielberg
+    birth_year: 1946
+- model: films.director
+  pk: 2
+  fields:
+    name: Martin Scorsese
+    birth_year: 1942
+- model: films.director
+  pk: 3
+  fields:
+    name: Alfred Hitchcock
+    birth_year: 1899
+- model: films.director
+  pk: 4
+  fields:
+    name: James Cameron
+    birth_year: 1954
