@@ -11,9 +11,14 @@
         GA Movie DB
         {% endblock title %}
     </title>
+    <style>
+        .shadow-dark, .shadow-dark-hover:hover {
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+    </style>
 </head>
 <body>
-<nav class="navbar navbar-expand-sm bg-body-tertiary">
+<nav class="navbar navbar-expand-sm bg-primary shadow-dark" data-bs-theme="dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="{% url 'homepage' %}">GA Movie DB</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
