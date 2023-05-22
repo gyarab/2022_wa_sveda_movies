@@ -6,41 +6,43 @@
 
 {% block content %}
 <div class="d-flex flex-column align-items-center justify-content-center">
-    <div class="w-100 d-flex flex-column align-items-start justify-content-center ms-5">
-        <h1>{{movie.name}}</h1>
+    <div class="w-100 d-flex flex-column align-items-start justify-content-center m-5 card p-2">
         <img
-                src="{% if movie.image_url %}{{movie.image_url}}{% else %}https://place-hold.it/180x100/{% endif %}"
+                src="{% if movie.image_url %}{{movie.image_url}}{% else %}https://picsum.photos/1800/1000{% endif %}"
                 alt="Card image cap"
-                class="rounded shadow-dark"
+                class="rounded mx-auto d-block rounded shadow-dark card-img-top"
         >
-        <p>{{ movie.description|safe }}</p>
-        <button class="btn btn-outline-primary my-3 shadow-dark-hover" type="button" data-bs-toggle="collapse" data-bs-target="#rateForm"
-                aria-expanded="false" aria-controls="collapseExample">
-            Přidat hodnocení
-        </button>
-    </div>
-    <div class="my-3">
-        <form action="" method="post" class="collapse shadow-dark rounded p-3 mb-4" id="rateForm">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <input type="submit" class="form-control btn btn-primary" value="Odeslat"/>
-        </form>
-    </div>
-
-    <ol class="w-100 list-group shadow-dark">
-        {% for comment in comments %}
-        <li class="list-group-item d-flex justify-content-between align-items-start">
-            <div class="ms-2 me-auto">
-                <div class="fw-bold">{{ comment.author }}</div>
-                <div>({{ comment.created_at|date:"j. n. Y H:i" }})</div>
-                {{ comment.text }}
+        <div class="w-100 card-body d-flex flex-column align-items-center justify-content-center">
+            <h1>{{movie.name}}</h1>
+            <p class="card-text">{{ movie.description|safe }}</p>
+            <button class="btn btn-outline-primary my-3 shadow-dark-hover" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#rateForm"
+                    aria-expanded="false" aria-controls="collapseExample">
+                Přidat hodnocení
+            </button>
+            <div class="my-3">
+                <form action="" method="post" class="collapse shadow-dark rounded p-3 mb-4" id="rateForm">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <input type="submit" class="form-control btn btn-primary" value="Odeslat"/>
+                </form>
             </div>
-            {% if comment.rating %}
-            <span class="badge bg-primary rounded-pill">{{ comment.rating }}%</span>
-            {% endif %}
-        </li>
-        {% endfor %}
-    </ol>
+            <ol class="w-100 list-group shadow-dark">
+                {% for comment in comments %}
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                        <div class="fw-bold">{{ comment.author }}</div>
+                        <div>({{ comment.created_at|date:"j. n. Y H:i" }})</div>
+                        {{ comment.text }}
+                    </div>
+                    {% if comment.rating %}
+                    <span class="badge bg-primary rounded-pill">{{ comment.rating }}%</span>
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ol>
+        </div>
+    </div>
 </div>
 
 {% endblock content %}

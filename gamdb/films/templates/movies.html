@@ -37,7 +37,7 @@ Filmy | {{ block.super }}
     <div class="col">
         <div class="card h-100">
             <img class="card-img-top"
-                 src="{% if movie.image_url %}{{movie.image_url}}{% else %}https://place-hold.it/180x100/{% endif %}"
+                 src="{% if movie.image_url %}{{movie.image_url}}{% else %}https://picsum.photos/900/700{% endif %}"
                  alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">{{ movie.name }}</h5>
