@@ -16,10 +16,6 @@ class Movie(models.Model):
 
     def genres_display(self):
         return ", ".join([i.name for i in self.genres.all()])
-        # out = ""
-        # for i in self.genres.all():
-        #     out += f"{i.name}, "
-        # return out
 
 
 class Comment(models.Model):
