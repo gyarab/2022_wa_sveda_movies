@@ -1,3 +1,3 @@
 django
 pyaml
-uwsgi
+uwsgia
